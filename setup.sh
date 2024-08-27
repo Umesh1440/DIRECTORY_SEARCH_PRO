@@ -61,6 +61,8 @@ install_dirsearch() {
     git clone https://github.com/maurosoria/dirsearch.git --depth 1
     cd dirsearch || exit
     pip3 install -r requirements.txt
+    # Add dirsearch to PATH by creating a symbolic link to dirsearch.py in /usr/local/bin
+    sudo ln -sf "$(pwd)/dirsearch.py" /usr/local/bin/dirsearch
     cd ..
     echo "[+] dirsearch installed successfully!"
 }
