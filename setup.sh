@@ -58,7 +58,7 @@ fi
 # Function to install dirsearch
 install_dirsearch() {
     echo "[+] Installing dirsearch..."
-    git clone https://github.com/maurosoria/dirsearch.git
+    git clone https://github.com/maurosoria/dirsearch.git --depth 1
     cd dirsearch || exit
     pip3 install -r requirements.txt
     cd ..
