@@ -46,7 +46,7 @@
 <pre><code>subfinder -version
 assetfinder -h
 httpx -version
-python3 -m dirsearch --version</code></pre>
+dirsearch --version</code></pre>
 
 <h2>Usage</h2>
 
