@@ -35,33 +35,11 @@ else
     echo "[+] Go is already installed."
 fi
 
-# Function to install subfinder
-install_subfinder() {
-    echo "[+] Installing subfinder..."
-    go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
-    echo "[+] subfinder installed successfully!"
-}
-
-# Check and install subfinder if not installed
-if ! command_exists subfinder; then
-    install_subfinder
-else
-    echo "[+] subfinder is already installed."
-fi
-
-# Function to install assetfinder
-install_assetfinder() {
-    echo "[+] Installing assetfinder..."
-    go install github.com/tomnomnom/assetfinder@latest
-    echo "[+] assetfinder installed successfully!"
-}
-
-# Check and install assetfinder if not installed
-if ! command_exists assetfinder; then
-    install_assetfinder
-else
-    echo "[+] assetfinder is already installed."
-fi
+# Install subfinder, assetfinder, golang, and xterm using apt
+echo "[+] Installing subfinder, assetfinder, golang, and xterm..."
+sudo apt update
+sudo apt install -y xterm subfinder assetfinder golang
+echo "[+] subfinder, assetfinder, golang, and xterm installed successfully!"
 
 # Function to install httpx
 install_httpx() {
